@@ -11,7 +11,7 @@ use Template;
 #use HTML::Template;
 
 my $dbh = DBI->connect("DBI:mysql:user1:localhost", 'user1', 'user1');
-my $sql = q/select * from students/;
+my $sql = q/select * from articles/;
 my $sth = $dbh->prepare($sql);
    $sth->execute;
 

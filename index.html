@@ -198,10 +198,43 @@ h6, .h6 {
           <a class="nav-link" href="#">Press</a>
           <a class="nav-link" href="#">New hires</a>
           <a class="nav-link" href="#">About</a>
-        </nav>
+<button type="button" class="btn btn-success ml-5" data-toggle="modal" data-target="auth_form.cgi">LOGIN</button>
+<button type="button" class="btn btn-success ml-5" data-toggle="modal" data-target="reg_form.cgi">REGISTER</button>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Recipient:</label>
+            <input type="text" class="form-control" id="recipient-name">
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="col-form-label">Message:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Send message</button>
       </div>
     </div>
+  </div>
+</div>					
+        </nav>
 
+      </div>
+
+    </div>
+		
     <div class="blog-header">
       <div class="container">
         <h1 class="blog-title">The Bootstrap Blog</h1>
@@ -226,21 +259,18 @@ h6, .h6 {
           <div class="blog-post">
             <h2 class="blog-post-title">Another blog post</h2>
             <p class="blog-post-meta">December 23, 2013 by <a href="#">UserN</a></p>
-            <p>
-            	    My Home Directory is <TMPL_VAR NAME=HOME>
-            </p>
-            <p>
-                    My Path is set to <TMPL_VAR NAME=PATH>
-            </p>
-
-            <p>
 
                    <TMPL_LOOP NAME="ROWS">
-                       <TMPL_VAR NAME=ID> <br>
-                       <TMPL_VAR NAME=LASTNAME> <br>
-                       <TMPL_VAR NAME=FIRSTNAME> <br>
-                       <TMPL_VAR NAME=PHONE> <br>
-                       <TMPL_VAR NAME=DATEOFBIRTH> <br>
+                       <div style="color: transparent"> 
+                       <TMPL_VAR NAME=ID>
+					   </div>
+                       <h2>
+                           <TMPL_VAR NAME=TITLE>
+  					   </h2>
+                       <blockquote>
+  						   <TMPL_VAR NAME=BODY>
+					   </blockquote>
+                       <TMPL_VAR NAME=USER_ID>	
                    </TMPL_LOOP>
 
 
