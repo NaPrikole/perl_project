@@ -176,69 +176,100 @@ h6, .h6 {
 
 .blog-footer {
   padding: 2.5rem 0;
-  color: #999;
+  color: #000;
   text-align: center;
-  background-color: #f9f9f9;
-  border-top: .05rem solid #e5e5e5;
+  font-style: italic;
 }
 .blog-footer p:last-child {
   margin-bottom: 0;
+}
+.list-unstyled li {
+ border-bottom: 1px solid #ccc;
 }
     </style>    
 
   </head>
 
-  <body>
+  <body style="background-color: #ffff99" >
 
-    <div class="blog-masthead">
+    <div class="blog-masthead mb-0">
       <div class="container">
         <nav class="nav blog-nav">
           <a class="nav-link active" href="#">Home</a>
           <a class="nav-link" href="#">New features</a>
-          <a class="nav-link" href="#">Press</a>
-          <a class="nav-link" href="#">New hires</a>
+          <a class="nav-link" href="#">Programmer story</a>
+          <a class="nav-link" href="#">Relax</a>
           <a class="nav-link" href="#">About</a>
-<button type="button" class="btn btn-success ml-5" data-toggle="modal" data-target="auth_form.cgi">LOGIN</button>
-<button type="button" class="btn btn-success ml-5" data-toggle="modal" data-target="reg_form.cgi">REGISTER</button>
+          <button style="color: #000;font-style: italic; font-weight: 600" type="button" class="btn btn-success m-1 ml-5 " data-toggle="modal" data-target="#auth" data-whatever="@mdo">AUTHORIZATION</button>
+          <button style="color: #000;font-style: italic; font-weight: 600"   type="button" class="btn btn-success m-1 ml-5 " data-toggle="modal" data-target="#reg" data-whatever="@mdo">REGISTRATION</button>
+          <div class="modal fade" id="auth" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  			<div class="modal-dialog" role="document">
+    			<div class="modal-content">
+      			<div class="modal-header">
+        			<h5 class="modal-title" id="exampleModalLabel">Authorization form</h5>
+       			    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          				<span aria-hidden="true">&times;</span>
+        			</button>
+      			</div>
+      			<div class="modal-body">
+        			<form>
+         				 <div class="form-group">
+            				<label for="recipient-name" class="col-form-label">E-mail:</label>
+          					<input type="text" class="form-control" id="recipient-name">
+          				</div>
+          				<div class="form-group">
+            				<label for="message-text" class="col-form-label">Password:</label>
+                              <input type="text" class="form-control" id="recipient-name">
+          				</div>
+        			</form>
+      			</div>
+      			<div class="modal-footer">
+        			<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        			<button type="button" class="btn btn-primary">SUBMIT</button>
+      			</div>
+   			 </div>
+          </div>
+          </div>
+                    <div class="modal fade" id="reg" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Registration form</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                         <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">E-mail:</label>
+                            <input type="text" class="form-control" id="recipient-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="message-text" class="col-form-label">Password:</label>
+                              <input type="text" class="form-control" id="recipient-name">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">SUBMIT</button>
+                </div>
+             </div>
+          </div>
+          </div>
 
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form>
-          <div class="form-group">
-            <label for="recipient-name" class="col-form-label">Recipient:</label>
-            <input type="text" class="form-control" id="recipient-name">
-          </div>
-          <div class="form-group">
-            <label for="message-text" class="col-form-label">Message:</label>
-            <textarea class="form-control" id="message-text"></textarea>
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Send message</button>
-      </div>
-    </div>
-  </div>
-</div>					
         </nav>
 
       </div>
 
     </div>
 		
-    <div class="blog-header">
+    <div class="blog-headear bg-info text-center pt-5">
       <div class="container">
-        <h1 class="blog-title">The Bootstrap Blog</h1>
-        <p class="lead blog-description">An example blog template built with Bootstrap.</p>
+        <h1 class="blog-title">The programming Blog</h1>
+        </br>
+        <p class="lead blog-description pb-2">Our test task for Perl part.</p>
       </div>
     </div>
 
@@ -248,68 +279,50 @@ h6, .h6 {
 
         <div class="col-sm-8 blog-main">
 
-          <div class="blog-post">
-            <h2 class="blog-post-title">Sample blog post</h2>
-            <p class="blog-post-meta">January 1, 2014 by <a href="#">UserN</a></p>
-            <p>
-              <TMPL_VAR NAME=HOME>
-            </p>
-          </div><!-- /.blog-post -->
 
           <div class="blog-post">
-            <h2 class="blog-post-title">Another blog post</h2>
+            <TMPL_LOOP NAME="ROWS">
+            <h2 class="blog-post-title"><TMPL_VAR NAME=TITLE></h2>
             <p class="blog-post-meta">December 23, 2013 by <a href="#">UserN</a></p>
-
-                   <TMPL_LOOP NAME="ROWS">
-                       <div style="color: transparent"> 
-                       <TMPL_VAR NAME=ID>
-					   </div>
-                       <h2>
-                           <TMPL_VAR NAME=TITLE>
-  					   </h2>
-                       <blockquote>
-  						   <TMPL_VAR NAME=BODY>
-					   </blockquote>
-                       <TMPL_VAR NAME=USER_ID>	
-                   </TMPL_LOOP>
-
-
-            </p>
-
-          </div><!-- /.blog-post -->
-
-          <div class="blog-post">
-            <h2 class="blog-post-title">New feature</h2>
-            <p class="blog-post-meta">December 14, 2013 by <a href="#">UserN</a></p>
-          </div><!-- /.blog-post -->
-
+            <div style="color: transparent"> 
+            <TMPL_VAR NAME=ID>
+		    </div>
+            <blockquote>
+  		    <TMPL_VAR NAME=BODY>
+		    </blockquote>
+            <TMPL_VAR NAME=USER_ID>
           <nav class="blog-pagination">
             <a class="btn btn-outline-primary" href="#">Older</a>
             <a class="btn btn-outline-secondary disabled" href="#">Newer</a>
           </nav>
-
+          <hr>
+            </TMPL_LOOP>
+          </div><!--.blog-post -->
         </div><!-- /.blog-main -->
 
         <div class="col-sm-3 offset-sm-1 blog-sidebar">
-          <div class="sidebar-module sidebar-module-inset">
-            <h4>About</h4>
-            <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+          <div class="sidebar-module sidebar-module-inset bg-info">
+            <h4>About our team: </h4>
+            <p>UserN: <em>Specialist in SOME </em></p>
+            <p>UserN: <em>Specialist in SOME </em></p>
+            <p>UserN: <em>Specialist in SOME </em></p>
+            <p>UserN: <em>Specialist in SOME </em></p>
           </div>
           <div class="sidebar-module">
             <h4>Archives</h4>
             <ol class="list-unstyled">
-              <li><a href="#">March 2014</a></li>
-              <li><a href="#">February 2014</a></li>
-              <li><a href="#">January 2014</a></li>
-              <li><a href="#">December 2013</a></li>
-              <li><a href="#">November 2013</a></li>
-              <li><a href="#">October 2013</a></li>
-              <li><a href="#">September 2013</a></li>
-              <li><a href="#">August 2013</a></li>
-              <li><a href="#">July 2013</a></li>
-              <li><a href="#">June 2013</a></li>
-              <li><a href="#">May 2013</a></li>
-              <li><a href="#">April 2013</a></li>
+              <li><a href="#">Perl</a></li>
+              <li><a href="#">Bash</a></li>
+              <li><a href="#">HTML5</a></li>
+              <li><a href="#">CSS3</a></li>
+              <li><a href="#">JavaScript</a></li>
+              <li><a href="#">AngularJS</a></li>
+              <li><a href="#">PHP</a></li>
+              <li><a href="#">SQL</a></li>
+              <li><a href="#">Databases</a></li>
+              <li><a href="#">Laravel</a></li>
+              <li><a href="#">GIT</a></li>
+              <li><a href="#">SVN</a></li>
             </ol>
           </div>
           <div class="sidebar-module">
@@ -326,24 +339,12 @@ h6, .h6 {
 
     </div><!-- /.container -->
 
-    <footer class="blog-footer">
-      <p>Blog template built for <a href="https://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+    <footer class="blog-footer bg-info">
+      <p>BLOG for <a href="#">Andrey Lyubyanitskiy</a> by <a href="#">UserN, UserN, UserN, UserN</a>.</p>
       <p>
         <a href="#">Back to top</a>
       </p>
     </footer>
-
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-
 
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
