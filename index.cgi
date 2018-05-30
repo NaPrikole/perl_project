@@ -8,7 +8,8 @@ use Data::Dumper;
 use Tools::FileSystem;
 use DBI;
 use Template;
-#use HTML::Template;
+use PasswdMD5;
+use Digest::MD5;
 
 my $dbh = DBI->connect("DBI:mysql:user1:localhost", 'user1', 'user1');
 my $sql = q/select * from articles/;
