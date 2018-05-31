@@ -19,19 +19,19 @@ my $password = $cgi->param('password');
 my $error = "";
 
 
-my $regexp =~ /[A-Za-z-_0-9]/ixm;
+my $regexp =~ /[A-Za-z-_0-9]/;
 #if ($login eq ""){
-if ($login eq "" || $login !~ /[A-Za-z-_0-9]/ixm) {
+if ($login !~ /^[A-Za-z0-9_-]{3,16}$/) {
    
    print "Registration faled !!!";
-   print '<meta http-equiv="refresh" content="1;url=index.cgi">';
+   print '<meta http-equiv="refresh" content="0;url=index.cgi">';
    return 0;  
 }
-elsif ($password eq "" || $password !~ /[A-Za-z-_0-9]/ixm){
+elsif ( $password !~ /^[A-Za-z0-9_-]{3,16}$/){
 #elsif ($password ne $regexp || $password eq "") {
    
    print "Registration faled!!!";
-   print '<meta http-equiv="refresh" content="1;url=index.cgi">';
+   print '<meta http-equiv="refresh" content="0;url=index.cgi">';
    return 0;
 }
 
@@ -42,7 +42,7 @@ VALUES ('$login', '$password')";
 my $sth = $dbh->prepare($sql);
    $sth->execute;
 print "Congratiolations - registration is seccessful !!!";
-print '<meta http-equiv="refresh" content="1;url=index.cgi">';
+print '<meta http-equiv="refresh" content="0;url=index.cgi">';
 
 
 
